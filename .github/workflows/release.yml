@@ -17,8 +17,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          ref: ${{ inputs.tag && format('refs/tags/{0}', inputs.tag) || github.ref }}
       - name: Publish release
         uses: softprops/action-gh-release@v2
         with:
