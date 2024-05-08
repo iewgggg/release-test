@@ -1,0 +1,26 @@
+changelog:
+  exclude:
+    labels:
+      - 'ignore-for-release'
+    authors:
+      # Ignore the release PR created by github-actions
+      - 'github-actions'
+  categories:
+    - title: '💥 Breaking Changes'
+      labels:
+        - 'change: breaking'
+    - title: '✨ Features'
+      labels:
+        - 'change: feat'
+    - title: '🚀 Performance'
+      labels:
+        - 'change: perf'
+    - title: '🐛 Bug Fixes'
+      labels:
+        - 'change: fix'
+    - title: '📖 Documentation'
+      labels:
+        - 'change: docs'
+    - title: Other Changes
+      labels:
+        - '*'
