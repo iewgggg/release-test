@@ -14,6 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      discussions: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -22,5 +23,6 @@ jobs:
         with:
           generate_release_notes: true
           tag_name: ${{ inputs.tag || '' }}
+          discussion_category_name: announcements
           body: |
             > Please refer to [Changelog]() for all changes.
