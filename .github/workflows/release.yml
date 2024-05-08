@@ -7,7 +7,7 @@ on:
         required: false
   push:
     tags:
-      - "v*"
+      - "v*.*.*"
 jobs:
   publish:
     name: Publish release
@@ -20,4 +20,8 @@ jobs:
         with:
           ref: ${{ inputs.tag && format('refs/tags/{0}', inputs.tag) || github.ref }}
       - name: Publish release
-        uses: ghalactic/github-release-from-tag@v5
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          body: |
+            > Please refer to [Changelog]() for all changes.
