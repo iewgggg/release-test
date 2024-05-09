@@ -23,6 +23,6 @@ jobs:
         with:
           generate_release_notes: true
           tag_name: ${{ inputs.tag || '' }}
-          discussion_category_name: announcements
+          discussion_category_name: Releases
           body: |
             > Please refer to [Changelog]() for all changes.
