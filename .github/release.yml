@@ -1,26 +1,27 @@
 changelog:
   exclude:
     labels:
-      - 'ignore-for-release'
+      - ignore-for-release
     authors:
-      # Ignore the release PR created by github-actions
-      - 'github-actions'
+      # Ignore the PR created by bots
+      - github-actions
+      - dependabot
   categories:
-    - title: '💥 Breaking Changes'
+    - title: 💥 Breaking Changes
       labels:
-        - 'change: breaking'
-    - title: '✨ Features'
+        - "change: breaking"
+    - title: ✨ Features
       labels:
-        - 'change: feat'
-    - title: '🚀 Performance'
+        - "change: feat"
+    - title: 🚀 Performance
       labels:
-        - 'change: perf'
-    - title: '🐛 Bug Fixes'
+        - "change: perf"
+    - title: 🐛 Bug Fixes
       labels:
-        - 'change: fix'
-    - title: '📖 Documentation'
+        - "change: fix"
+    - title: 📖 Documentation
       labels:
-        - 'change: docs'
+        - "change: docs"
     - title: Other Changes
       labels:
-        - '*'
+        - "*"
