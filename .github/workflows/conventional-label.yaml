@@ -13,4 +13,21 @@ jobs:
     steps:
       - uses: bcoe/conventional-release-labels@v1
         with:
-          type_labels: '{"breaking": "change: breaking", "feat": "change: feat", "perf": "change: perf", "fix": "change: fix", "docs": "change: docs"}'
+          type_labels: |
+            {
+              "breaking": "change: breaking",
+              "feat": "change: feat",
+              "perf": "change: perf",
+              "fix": "change: fix",
+              "docs": "change: docs",
+              "build": "change: build",
+              "revert": "change: revert"
+            }
+          ignored_types: |
+            [
+              "style",
+              "refactor",
+              "test",
+              "ci",
+              "chore"
+            ]
